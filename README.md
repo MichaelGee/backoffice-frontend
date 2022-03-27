@@ -13,7 +13,10 @@
 
  `/redux` - This directory contains Redux and all associated Redux setup files.
 
-  `/utils` - This directory contains Javascript utility functions and helper functions.
+ `/utils` - This directory contains Javascript utility functions and helper functions.
+
+ `/stitches` - This directory contains all Stitches configurations and setup for creating styled components.
+  
 
 # User Interface Design System
 
