@@ -1,22 +1,21 @@
 # **File Structure**
 
- `/assets` - This directory contains static assets (fonts, images, icons etc).
+`/assets` - This directory contains static assets (fonts, images, icons etc).
 
- `/components` - This directory contains independent React components that
-  could be reused throughout the website, which are grouped into atoms and organisms.
+`/components` - This directory contains independent React components that
+could be reused throughout the website, which are grouped into atoms and organisms.
 
- `/contexts` - This directory contains all React context files.
+`/contexts` - This directory contains all React context files.
 
- `/hooks` - This directory contains reuseable hooks.
+`/hooks` - This directory contains reuseable hooks.
 
-  `/assets` - This directory contains all the pages in this project.
+`/assets` - This directory contains all the pages in this project.
 
- `/redux` - This directory contains Redux and all associated Redux setup files.
+`/redux` - This directory contains Redux and all associated Redux setup files.
 
- `/utils` - This directory contains Javascript utility functions and helper functions.
+`/utils` - This directory contains Javascript utility functions and helper functions.
 
- `/stitches` - This directory contains all Stitches configurations and setup for creating styled components.
-  
+`/stitches` - This directory contains all Stitches configurations and setup for creating styled components.
 
 # User Interface Design System
 
@@ -46,6 +45,17 @@ _**Pages**_: Pages are the highest level of interface design. They combine all t
 | Organisms  | Product Grid, Tables, etc.                                          |
 
 Remember, the goal is to create a simple, yet powerful, interface design system but each element and what they represent in relation to atomic desig are subject to interpretation, but the basic rules of the structure should be followed to make it easy to create.
+
 # **Commands**
 
 # **Deployment**
+
+# **Storybook**
+
+This project utilizes [Storybook](https://storybook.js.org/), UI development tool, which provides a sandbox to design, build and organize UI components in isolation without getting tripped up over business logic. The rendered state of a UI component is captured by a Story. Developers write multiple stories per component that describe all the “interesting” states a component can support. Read more about stories [here](https://storybook.js.org/docs/react/get-started/whats-a-story).
+
+## **Run storybook**
+
+```
+npm run storybook
+```

@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "../src/stitches";
+import "../src/index.css";
 
 const Box = styled("div", {
 	display: "flex",
@@ -9,8 +10,6 @@ const Box = styled("div", {
 	justifyContent: "center",
 	alignItems: "center",
 	flexWrap: "wrap",
-	width: "100vw",
-	height: "calc(100vh - 60px)",
 });
 
 export const decorators = [

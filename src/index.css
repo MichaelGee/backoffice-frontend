@@ -1,13 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: "DM Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	font-family: "DM Sans", sans-serif;
+}
+
+@font-face {
+	font-family: "DM Sans", sans-serif;
+	src: url("../src/assets/fonts/DMSans/DMSans-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DM Sans", sans-serif;
+	src: url("../src/assets/fonts/DMSans/DMSans-Italic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DM Sans", sans-serif;
+	src: url("../src/assets/fonts/DMSans/DMSans-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DM Sans", sans-serif;
+	src: url("../src/assets/fonts/DMSans/DMSans-BoldItalic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DM Sans", sans-serif;
+	src: url("../src/assets/fonts/DMSans/DMSans-MediumItalic.ttf") format("truetype");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DM Sans", sans-serif;
+	src: url("../src/assets/fonts/DMSans/DMSans-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ================================ */
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-ExtralightItalic.ttf") format("truetype");
+	font-weight: 200;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-MediumItalic.ttf") format("truetype");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-LightItalic.ttf") format("truetype");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-Regular.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-BoldItalic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-Italic.ttf") format("truetype");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-Extralight.ttf") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-Semibold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "General Sans";
+	src: url("../src/assets/fonts/GeneralSans/GeneralSans-SemiboldItalic.ttf") format("truetype");
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
