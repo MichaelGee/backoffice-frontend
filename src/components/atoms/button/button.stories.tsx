@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Button } from "./index";
 
 export default {
-	title: "Compoennts/Atoms/Buttons/Primary Button",
+	title: "Components/Atoms/Buttons/Primary Button",
 	component: Button,
 	argTypes: {
 		type: { options: ["button", "submit", "reset"], control: { type: "radio" } },

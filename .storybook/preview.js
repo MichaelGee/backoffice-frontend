@@ -1,6 +1,7 @@
 import React from "react";
 import { styled } from "../src/stitches";
 import "../src/index.css";
+import "../src/base.css";
 
 const Box = styled("div", {
 	display: "flex",

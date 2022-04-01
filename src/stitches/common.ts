@@ -72,6 +72,9 @@ export const defaultTokens = {
 		default: "all 250ms ease",
 		button: "background 0.25s ease 0s, color 0.25s ease 0s, border-color 0.25s ease 0s, box-shadow 0.25s ease 0s, transform 0.25s ease 0s, opacity 0.25s ease 0s",
 	},
+	shadows: {
+		input: "0px 3px 6px rgba(170, 149, 245, 0.05)",
+	},
 	breakpoints: {
 		xs: "650px",
 		sm: "960px",
@@ -85,6 +88,8 @@ export const defaultColors = {
 	white: "#FFFFFF",
 	purple100: "#E4DDFF",
 	purple200: "#B209CD",
+	purple300: "#3C268C",
+	purple400: "#7464B3",
 };
 
 export const defaultMedia = {
@@ -258,7 +263,7 @@ export const defaultUtils = {
 	}),
 	w: (value: Stitches.PropertyValue<"width">) => ({ width: value }),
 	h: (value: Stitches.PropertyValue<"height">) => ({ height: value }),
-	mw: (value: Stitches.PropertyValue<"maxWidth">) => ({ maxWidth: value }),
+	minW: (value: Stitches.PropertyValue<"minWidth">) => ({ minWidth: value }),
 	maxW: (value: Stitches.PropertyValue<"maxWidth">) => ({
 		maxWidth: value,
 	}),

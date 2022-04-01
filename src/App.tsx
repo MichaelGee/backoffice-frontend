@@ -1,7 +1,7 @@
 import React from "react";
-import GlobalStyles from "globalStyles";
 import { ErrorBoundary } from "react-error-boundary";
 import "./App.css";
+import "./base.css";
 
 interface ErrorFallbackProps {
 	error: any;
@@ -19,7 +19,7 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error }) => {
 function App() {
 	return (
 		<ErrorBoundary FallbackComponent={ErrorFallback}>
-			<GlobalStyles />
+			<div />
 		</ErrorBoundary>
 	);
 }
