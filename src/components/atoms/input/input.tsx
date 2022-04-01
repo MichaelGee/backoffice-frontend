@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import { Icon } from "components/atoms/icon";
 import { StyledInputMainContainer, StyledInputLabel, StyledInput, StyledInnerContainer } from "./input.styles";
 
@@ -6,16 +6,25 @@ interface Props {
 	type?: string;
 	placeholder?: string;
 	label?: string;
+	value?: string;
 }
 
-const Input: React.FC<Props> = ({ type, placeholder, label, ...props }) => {
+const Input = forwardRef<HTMLInputElement, Props>(function Input({ type, placeholder, label, value, ...props }, ref) {
 	const [show, setShow] = useState(false);
 	const toggleShow = () => setShow((v) => !v);
 	return (
 		<StyledInputMainContainer>
 			<StyledInputLabel>{label}</StyledInputLabel>
 			<StyledInnerContainer>
-				<StyledInput aria-label="input" data-testid="input" type={type} placeholder={placeholder} {...props} />
+				<StyledInput
+					aria-label="input"
+					data-testid="input"
+					type={type}
+					value={value}
+					placeholder={placeholder}
+					ref={ref}
+					{...props}
+				/>
 				{type === "password" && (
 					<Icon
 						onClick={toggleShow}
@@ -29,6 +38,6 @@ const Input: React.FC<Props> = ({ type, placeholder, label, ...props }) => {
 			</StyledInnerContainer>
 		</StyledInputMainContainer>
 	);
-};
+});
 
 export default Input;
