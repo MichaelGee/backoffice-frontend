@@ -19,7 +19,7 @@ const Input = forwardRef<HTMLInputElement, Props>(function Input({ type, placeho
 				<StyledInput
 					aria-label="input"
 					data-testid="input"
-					type={type}
+					type={show ? "password" : "text" || type}
 					value={value}
 					placeholder={placeholder}
 					ref={ref}
@@ -31,7 +31,7 @@ const Input = forwardRef<HTMLInputElement, Props>(function Input({ type, placeho
 						icon={!show ? "hide" : "show"}
 						size={20}
 						fill="#7E5FF2"
-						viewBox="0 0 20 16"
+						viewBox={show ? "0 0 20 16" : "0 0 20 18"}
 						className="show-icon"
 					/>
 				)}
