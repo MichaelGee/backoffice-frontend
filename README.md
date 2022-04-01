@@ -48,14 +48,33 @@ Remember, the goal is to create a simple, yet powerful, interface design system 
 
 # **Commands**
 
+Start application
+
+```
+npm start
+```
+
+Run all components in storybook
+
+```
+npm run storybook
+```
+
+Run all tests:
+
+```
+
+```
+
+npm run test
+
+```
+
 # **Deployment**
 
 # **Storybook**
 
 This project utilizes [Storybook](https://storybook.js.org/), UI development tool, which provides a sandbox to design, build and organize UI components in isolation without getting tripped up over business logic. The rendered state of a UI component is captured by a Story. Developers write multiple stories per component that describe all the “interesting” states a component can support. Read more about stories [here](https://storybook.js.org/docs/react/get-started/whats-a-story).
 
-## **Run storybook**
 
-```
-npm run storybook
 ```
