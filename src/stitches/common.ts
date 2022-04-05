@@ -70,7 +70,7 @@ export const defaultTokens = {
 	},
 	transitions: {
 		default: "all 250ms ease",
-		button: "background 0.25s ease 0s, color 0.25s ease 0s, border-color 0.25s ease 0s, box-shadow 0.25s ease 0s, transform 0.25s ease 0s, opacity 0.25s ease 0s",
+		button: "background 0.25s ease 0s, color 0.25s ease 0s, border-color 0.65s ease 0s, box-shadow 0.25s ease 0s, transform 0.25s ease 0s, opacity 0.25s ease 0s",
 	},
 	shadows: {
 		input: "0px 3px 6px rgba(170, 149, 245, 0.05)",
@@ -90,6 +90,7 @@ export const defaultColors = {
 	purple200: "#B209CD",
 	purple300: "#3C268C",
 	purple400: "#7464B3",
+	purple500: "#F6F3FF",
 };
 
 export const defaultMedia = {

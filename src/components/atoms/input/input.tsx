@@ -1,17 +1,43 @@
 import React, { useState, forwardRef } from "react";
 import { Icon } from "components/atoms/icon";
-import { StyledInputMainContainer, StyledInputLabel, StyledInput, StyledInnerContainer } from "./input.styles";
+import {
+	StyledInputMainContainer,
+	StyledInputLabel,
+	StyledInput,
+	StyledInnerContainer,
+	InputVariantsProps,
+} from "./input.styles";
 
+export type FormElement = HTMLInputElement;
 interface Props {
 	type?: string;
 	placeholder?: string;
 	label?: string;
 	value?: string;
+	onFocus?: (e: React.FocusEvent<FormElement>) => void;
+	onChange?: (e: React.ChangeEvent<FormElement>) => void;
+	onBlur?: (e: React.FocusEvent<FormElement>) => void;
 }
 
-const Input = forwardRef<HTMLInputElement, Props>(function Input({ type, placeholder, label, value, ...props }, ref) {
+type InputProps = Props & InputVariantsProps;
+
+const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
+	{ type, placeholder, label, value, focused, onFocus, onChange, onBlur, ...props },
+	ref
+) {
 	const [show, setShow] = useState(false);
 	const toggleShow = () => setShow((v) => !v);
+	const [hover, setHover] = useState<boolean>(false);
+
+	const focusHandler = (e: React.FocusEvent<FormElement>) => {
+		setHover(true);
+		onFocus && onFocus(e);
+	};
+	const blurHandler = (e: React.FocusEvent<FormElement>) => {
+		setHover(false);
+		onBlur && onBlur(e);
+	};
+
 	return (
 		<StyledInputMainContainer>
 			<StyledInputLabel>{label}</StyledInputLabel>
@@ -22,6 +48,10 @@ const Input = forwardRef<HTMLInputElement, Props>(function Input({ type, placeho
 					type={show ? "password" : "text" || type}
 					value={value}
 					placeholder={placeholder}
+					onFocus={focusHandler}
+					focused={hover}
+					onChange={onChange}
+					onBlur={blurHandler}
 					ref={ref}
 					{...props}
 				/>

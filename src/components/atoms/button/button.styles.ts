@@ -10,12 +10,10 @@ const rotate = keyframes({
 });
 
 export const StyledButton = styled("button", {
-	bg: "$primary",
 	br: "10px",
 	fs: "15px",
 	fWeight: "$medium",
 	lh: "22px",
-	color: "$white",
 	ta: "center",
 	p: "12px 24px",
 	border: "none",
@@ -46,6 +44,26 @@ export const StyledButton = styled("button", {
 				br: "100px",
 			},
 		},
+		variant: {
+			primary: {
+				bg: "$primary",
+				color: "$white",
+			},
+			secondary: {
+				bg: "$white",
+				color: "purple300",
+				"&:hover": {
+					bg: "$white",
+				},
+			},
+			tertiary: {
+				bg: "$purple500",
+				color: "purple300",
+				"&:hover": {
+					bg: "$purple500",
+				},
+			},
+		},
 		loading: {
 			true: {
 				color: "transparent",
@@ -64,6 +82,10 @@ export const StyledButton = styled("button", {
 				},
 			},
 		},
+	},
+	"@xsMax": {
+		fs: "12px",
+		p: "9px 16px",
 	},
 });
 

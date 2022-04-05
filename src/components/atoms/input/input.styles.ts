@@ -17,13 +17,27 @@ export const StyledInput = styled("input", {
 	color: "$purple300",
 	width: "100%",
 	mt: "5px",
+	"&::placeholder": {
+		color: "$purple100",
+		transition: "opacity 0.65s ease 0s",
+		MozTransition: "opacity 0.65s ease 0s",
+		MsTransition: "opacity 0.65s ease 0s",
+		WebkitTransition: "opacity 0.65s ease 0s",
+	},
+	variants: {
+		focused: {
+			true: {
+				"&::placeholder": {
+					opacity: 0,
+					transition: "opacity 0.65s ease 0s",
+				},
+			},
+		},
+	},
 	"&:focus": {
 		border: "1px solid $primary",
 		outline: "none",
 		transition: "$button",
-	},
-	"&::placeholder": {
-		color: "$purple100",
 	},
 });
 

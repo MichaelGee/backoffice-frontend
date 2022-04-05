@@ -1,3 +1,4 @@
+import { Switch } from "components/atoms/switch";
 import React from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import "./App.css";
@@ -19,7 +20,7 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error }) => {
 function App() {
 	return (
 		<ErrorBoundary FallbackComponent={ErrorFallback}>
-			<div />
+			<Switch />
 		</ErrorBoundary>
 	);
 }

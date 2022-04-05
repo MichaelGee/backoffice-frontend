@@ -1,4 +1,3 @@
-import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Button } from "./index";
 
@@ -7,6 +6,7 @@ export default {
 	component: Button,
 	argTypes: {
 		type: { options: ["button", "submit", "reset"], control: { type: "radio" } },
+		variant: { options: ["primary", "secondary", "tertiary"], control: { type: "radio" } },
 	},
 } as ComponentMeta<typeof Button>;
 
