@@ -5,24 +5,24 @@ import "./App.css";
 import "./base.css";
 
 interface ErrorFallbackProps {
-	error: any;
+  error: any;
 }
 
 const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error }) => {
-	return (
-		<div role="alert">
-			<p>Something went wrong:</p>
-			<pre style={{ color: "red" }}>{error.message}</pre>
-		</div>
-	);
+  return (
+    <div role='alert'>
+      <p>Something went wrong:</p>
+      <pre style={{ color: "red" }}>{error.message}</pre>
+    </div>
+  );
 };
 
 function App() {
-	return (
-		<ErrorBoundary FallbackComponent={ErrorFallback}>
-			<Switch />
-		</ErrorBoundary>
-	);
+  return (
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <Switch />
+    </ErrorBoundary>
+  );
 }
 
 export default App;

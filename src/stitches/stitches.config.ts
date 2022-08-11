@@ -3,13 +3,13 @@ import type * as Stitches from "@stitches/react";
 import commonTheme from "./common";
 
 const stitches = createStitches({
-	...commonTheme,
-	theme: {
-		...commonTheme.theme,
-		colors: {
-			...commonTheme.theme.colors,
-		},
-	},
+  ...commonTheme,
+  theme: {
+    ...commonTheme.theme,
+    colors: {
+      ...commonTheme.theme.colors,
+    },
+  },
 });
 
 export const config = stitches.config;
@@ -25,13 +25,13 @@ export type VariantProps<T> = Stitches.VariantProps<T>;
 export type StitchesTheme = typeof theme;
 
 export const sharedVisuallyHidden = css({
-	border: "0px",
-	clip: "rect(0px, 0px, 0px, 0px)",
-	height: "1px",
-	width: "1px",
-	margin: "-1px",
-	padding: "0px",
-	overflow: "hidden",
-	whiteSpace: "nowrap",
-	position: "absolute",
+  border: "0px",
+  clip: "rect(0px, 0px, 0px, 0px)",
+  height: "1px",
+  width: "1px",
+  margin: "-1px",
+  padding: "0px",
+  overflow: "hidden",
+  whiteSpace: "nowrap",
+  position: "absolute",
 });
