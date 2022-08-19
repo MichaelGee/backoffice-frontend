@@ -35,7 +35,7 @@ const alignContent = tuple(
 );
 
 const direction = tuple("row", "row-reverse", "column", "column-reverse");
-
+const display = tuple("flex", "block", "grid", "inline", "inline-block", "inline-flex", "inline-grid");
 export type AlignContent = typeof alignContent[number];
 export type AlignItems = typeof alignItems[number];
 export type BreakpointsValue = number | boolean;
@@ -43,3 +43,4 @@ export type Direction = typeof direction[number];
 export type Justify = typeof justify[number];
 export type TextTransforms = typeof textTransforms[number];
 export type Wrap = typeof wrap[number];
+export type Display = typeof display[number];

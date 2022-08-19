@@ -2,6 +2,7 @@ import React from "react";
 import { styled } from "../src/stitches";
 import "../src/index.css";
 import "../src/base.css";
+import { themes } from "@storybook/theming";
 
 const Box = styled("div", {
   display: "flex",
@@ -28,5 +29,12 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  darkMode: {
+    current: "light",
+    // Override the default dark theme
+    dark: { ...themes.dark, appBg: "#F6F9FC", appContentBg: "#E5E5E5" },
+    // Override the default light theme
+    light: { ...themes.normal, appContentBg: "#E5E5E5" },
   },
 };

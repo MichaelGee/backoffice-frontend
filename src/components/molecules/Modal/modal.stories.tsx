@@ -1,5 +1,4 @@
 import { ComponentMeta } from "@storybook/react";
-
 import { Text } from "components/atoms/Text";
 import { Modal } from "./index";
 import React, { useState } from "react";

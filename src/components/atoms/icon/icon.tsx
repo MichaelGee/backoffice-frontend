@@ -9,6 +9,10 @@ interface Props {
   className?: string;
   viewBox?: string;
   style?: React.CSSProperties;
+  stroke?: string;
+  strokeWidth?: string;
+  strokeLinecap?: "butt" | "round" | "square" | undefined;
+  strokeLineJoin?: "miter" | "round" | "bevel" | undefined;
   onClick?: React.MouseEventHandler<SVGSVGElement>;
 }
 
@@ -20,7 +24,19 @@ const defaultProps = {
   style: {},
 };
 
-const Icon: React.FC<Props> = ({ size, fill, icon, className, viewBox, style, ...props }) => {
+const Icon: React.FC<Props> = ({
+  size,
+  fill,
+  icon,
+  className,
+  viewBox,
+  stroke,
+  strokeWidth,
+  strokeLinecap,
+  strokeLineJoin,
+  style,
+  ...props
+}) => {
   return (
     <svg
       className={className}
@@ -31,7 +47,14 @@ const Icon: React.FC<Props> = ({ size, fill, icon, className, viewBox, style, ..
       xmlns='http://www.w3.org/2000/svg'
       {...props}
     >
-      <path fill={fill} d={iconPaths[icon]} />
+      <path
+        fill={fill}
+        d={iconPaths[icon]}
+        stroke={stroke}
+        stroke-width={strokeWidth}
+        stroke-linecap={strokeLinecap}
+        stroke-linejoin={strokeLineJoin}
+      />
     </svg>
   );
 };

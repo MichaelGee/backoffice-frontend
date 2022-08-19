@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { Icon } from "components/atoms/icon";
 import {
   StyledInputMainContainer,
@@ -6,6 +6,8 @@ import {
   StyledInput,
   StyledInnerContainer,
   InputVariantsProps,
+  PasswordEye,
+  Addon,
 } from "./input.styles";
 
 export type FormElement = HTMLInputElement;
@@ -17,17 +19,19 @@ interface Props {
   onFocus?: (e: React.FocusEvent<FormElement>) => void;
   onChange?: (e: React.ChangeEvent<FormElement>) => void;
   onBlur?: (e: React.FocusEvent<FormElement>) => void;
+  addon?: any;
 }
 
 type InputProps = Props & InputVariantsProps;
 
 const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
-  { type, placeholder, label, value, focused, onFocus, onChange, onBlur, ...props },
+  { type, placeholder, label, value, focused, addon, onFocus, onChange, onBlur, ...props },
   ref
 ) {
   const [show, setShow] = useState(false);
   const toggleShow = () => setShow((v) => !v);
   const [hover, setHover] = useState<boolean>(false);
+  const [addonPresent, setAddonPresent] = useState<boolean>(false);
 
   const focusHandler = (e: React.FocusEvent<FormElement>) => {
     setHover(true);
@@ -38,27 +42,65 @@ const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
     onBlur && onBlur(e);
   };
 
+  useEffect(() => {
+    if (addon) {
+      setAddonPresent(true);
+    } else {
+      setAddonPresent(false);
+    }
+  }, [addon]);
+
+  const renderInputType = () => {
+    switch (type) {
+      case "password":
+        return (
+          <StyledInput
+            aria-label='input'
+            data-testid='input'
+            type={show ? "text" : "password"}
+            passwordState={show}
+            value={value}
+            checkAddon={addonPresent}
+            placeholder={placeholder}
+            onFocus={focusHandler}
+            focused={hover}
+            onChange={onChange}
+            onBlur={blurHandler}
+            ref={ref}
+            {...props}
+          />
+        );
+      default:
+        return (
+          <StyledInput
+            aria-label='input'
+            data-testid='input'
+            type={type}
+            passwordState={show}
+            value={value}
+            checkAddon={addonPresent}
+            placeholder={placeholder}
+            onFocus={focusHandler}
+            focused={hover}
+            onChange={onChange}
+            onBlur={blurHandler}
+            ref={ref}
+            {...props}
+          />
+        );
+    }
+  };
+
   return (
     <StyledInputMainContainer>
       <StyledInputLabel>{label}</StyledInputLabel>
       <StyledInnerContainer>
-        <StyledInput
-          aria-label='input'
-          data-testid='input'
-          type={show ? "password" : "text" || type}
-          value={value}
-          placeholder={placeholder}
-          onFocus={focusHandler}
-          // focused={hover}
-          onChange={onChange}
-          onBlur={blurHandler}
-          ref={ref}
-          {...props}
-        />
+        {addon && <Addon>{addon}</Addon>}
+        {renderInputType()}
         {type === "password" && (
-          <Icon
+          <PasswordEye
             onClick={toggleShow}
-            icon={!show ? "hide" : "show"}
+            icon={show ? "hide" : "show"}
             size={20}
             fill='#7E5FF2'
             viewBox={show ? "0 0 20 16" : "0 0 20 18"}

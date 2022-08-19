@@ -3,6 +3,7 @@ import type * as Stitches from "@stitches/react";
 export const defaultTokens = {
   fonts: {
     dm: "'DM Sans', sans-serif",
+    general: "'General Sans', sans-serif",
   },
   fontWeights: {
     hairline: 100,

@@ -51,7 +51,7 @@ export const StyledButton = styled("button", {
       },
       secondary: {
         bg: "$white",
-        color: "purple300",
+        color: "$purple300",
         "&:hover": {
           bg: "$white",
         },
