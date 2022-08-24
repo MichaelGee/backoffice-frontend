@@ -11,7 +11,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "apisauce": "^2.1.5",
+    "apisauce": "^2.1.6",
     "axios": "^0.27.2",
     "axios-retry": "^3.2.5",
     "react": "^17.0.2",
@@ -28,7 +28,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "cross-env PORT=8888 react-scripts start",
+    "start": "cross-env PORT=4040 react-scripts start",
     "build": "CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -79,7 +79,7 @@
     "@storybook/testing-library": "0.0.9",
     "@storybook/theming": "^6.5.10",
     "cross-env": "^7.0.3",
-    "cypress": "^10.4.0",
+    "cypress": "^10.6.0",
     "eslint-plugin-cypress": "^2.12.1",
     "storybook-dark-mode": "^1.1.0",
     "webpack": "^5.70.0"

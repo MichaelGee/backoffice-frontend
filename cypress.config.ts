@@ -5,7 +5,7 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: "http://localhost:8888",
+    baseUrl: "http://localhost:4040",
     video: false,
   },
 
